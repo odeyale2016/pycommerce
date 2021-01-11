@@ -9,7 +9,11 @@
             <h3>Create Order</h3>
             <form method="POST" action="">
                 {% csrf_token %}
+                
+                {% for form in formset %}
                 {{form}}
+                <hr>
+                {% endfor %}
                 <input type="submit" name="submit" value="Submit">
             </form>
 </div>
